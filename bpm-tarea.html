@@ -1,0 +1,67 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../iron-icons/communication-icons.html">
+
+<!--
+`bpm-tarea`
+
+
+@demo demo/index.html 
+-->
+
+<dom-module id="bpm-tarea">
+  <template>
+    <style>
+      .capa-actividad {
+        display: inline-block;
+        border: 2px solid #218bb5;
+        border-radius: 10px;
+        overflow: hidden;
+        padding: 20px 10px;
+        text-align: center;
+        position: relative;
+      }
+      .capa-input {
+        border: 0;
+        text-align: center;
+      }
+      .capa-iron-icon {
+        position: absolute;
+        top: 3px;
+        left: 7px;
+      }
+      .capa-iron-icon iron-icon {
+        height: 18px;
+        width: 18px;
+        color: #218bb5;
+      }
+
+    </style>
+   
+   <div class="capa-actividad"> 
+     <div class="capa-iron-icon">
+       <iron-icon icon="communication:[[prop1]]"></iron-icon>
+     </div>
+     <input class="capa-input" type="text">
+
+
+   </div>
+  </template>
+
+  <script>
+    Polymer({
+
+      is: 'bpm-tarea',
+
+      properties: {
+        prop1: {
+          type: String,
+          value: 'mail-outline',
+        },
+       
+          
+        
+      },
+
+    });
+  </script>
+</dom-module>
