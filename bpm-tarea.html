@@ -15,15 +15,20 @@
         display: inline-block;
         border: 2px solid #218bb5;
         border-radius: 10px;
-        overflow: hidden;
+        
         padding: 20px 10px;
         text-align: center;
         position: relative;
+        background: white;
+        z-index: 999;
       }
+      
       .capa-input {
         border: 0;
         text-align: center;
+        height: 30px;
       }
+      
       .capa-iron-icon {
         position: absolute;
         top: 3px;
@@ -34,6 +39,26 @@
         width: 18px;
         color: #218bb5;
       }
+      .opcion_actividad {
+        display: inline-block;
+        border: 2px solid #218bb5;
+        height: 15px;
+        width: 15px;
+        border-radius: 3px;
+        position: absolute;
+        top: 0;
+        /* right: -25px; */
+        right: 0;
+        z-index: 1;
+        transition: 1s;
+
+      }
+      .capa-actividad:hover .opcion_actividad {
+        right: -25px;
+        z-index: 1;
+      }
+
+      
 
     </style>
    
@@ -41,7 +66,11 @@
      <div class="capa-iron-icon">
        <iron-icon icon="communication:[[prop1]]"></iron-icon>
      </div>
-     <input class="capa-input" type="text">
+     
+     <textarea class="capa-input"></textarea>
+     <!-- opciones-->
+     <div class="opcion_actividad"></div>
+     <div class="opcion_compuerta"></div>
 
 
    </div>
